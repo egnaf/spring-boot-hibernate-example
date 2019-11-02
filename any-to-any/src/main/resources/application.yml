@@ -1,0 +1,34 @@
+# Server configuration
+server:
+  port: 8080
+  address:
+
+# Spring Boot configuration
+spring:
+  profiles:
+    active: development
+
+  # Database configuration
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://database:5432/demo?createDatabaseIfNotExist=true
+    username: root
+    password: root
+
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false
+
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.hibernate: INFO
