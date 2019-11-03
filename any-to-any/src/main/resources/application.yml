@@ -11,7 +11,7 @@ spring:
   # Database configuration
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/postgres?createDatabaseIfNotExist=true
+    url: jdbc:postgresql://database:5432/demo?createDatabaseIfNotExist=true
     username: root
     password: root
 
@@ -26,9 +26,9 @@ spring:
     generate-ddl: false
 
 # Logger configuration
-#logging:
-#  pattern:
-#    console: "%d %-5level %logger : %msg%n"
-#  level:
-#    org.springframework: INFO
-#    org.hibernate: INFO
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.hibernate: INFO
