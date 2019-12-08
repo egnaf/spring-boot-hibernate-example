@@ -1,4 +1,4 @@
-package com.github.egnaf.springHibernateExample.models.ManyToOne;
+package com.github.egnaf.springHibernateExample.models.manyToOne;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
