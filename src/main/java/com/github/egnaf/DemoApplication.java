@@ -1,4 +1,4 @@
-package com.company.app;
+package com.github.egnaf;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
