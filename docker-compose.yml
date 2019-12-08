@@ -1,8 +1,8 @@
 version: '3'
 services:
 
-  # Postgres
-  database:
+  # Postgres service
+  postgres:
     image: postgres:latest
     ports:
       - "6564:5432"
@@ -11,10 +11,10 @@ services:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
 
-  # Spring Boot application
+  # Spring Boot application service
   backend:
     build: .
     ports:
-      - 6565:8080
+      - "6565:8080"
     depends_on:
-      - database
+      - postgres
