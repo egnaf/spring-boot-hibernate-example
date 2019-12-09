@@ -23,8 +23,10 @@ public class Student {
     private String lastName;
 
     @ManyToMany
-    @JoinTable(name = "student_elective", joinColumns = {
-            @JoinColumn(name = "student_id", referencedColumnName = "id")}, inverseJoinColumns = {
+    @JoinTable(name = "student_elective",
+            joinColumns = {
+            @JoinColumn(name = "student_id", referencedColumnName = "id")},
+            inverseJoinColumns = {
             @JoinColumn(name = "elective_id", referencedColumnName = "id")})
     private Set<Elective> electives;
 }

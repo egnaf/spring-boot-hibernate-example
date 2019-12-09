@@ -18,6 +18,6 @@ public class Driver {
 
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "car")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "driver")
     private Set<Car> cars;
 }
