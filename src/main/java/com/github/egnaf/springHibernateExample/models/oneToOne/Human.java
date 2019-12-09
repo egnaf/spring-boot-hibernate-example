@@ -16,4 +16,8 @@ public class Human {
     private Long id;
 
     private String name;
+
+    @OneToOne
+    @JoinColumn(name = "passport_id", referencedColumnName = "id")
+    private Passport passport;
 }
