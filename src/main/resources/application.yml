@@ -1,24 +1,24 @@
 # Server configuration
 server:
   port: 8080
-  address:
+  address: /api
 
 # Spring Boot configuration
 spring:
   profiles:
-    active: development
+    active: dev
 
   # Database configuration
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://database:5432/demo?createDatabaseIfNotExist=true
+    url: jdbc:postgresql://postgres:5432/postgres?createDatabaseIfNotExist=true
     username: root
-    password: root
+    password: # default password for postgres is empty
 
-  # JPA properties
+  # JPA configuration
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: false
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
